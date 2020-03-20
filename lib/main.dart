@@ -1,69 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutterinaction/test/demo_page.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(DemoApp());
 
-/*class DemoWidget extends StatelessWidget{
-  final String text;
-
-  DemoWidget(this.text);
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Container(
-      color: Colors.white,
-      child: Text(text ?? "this is a stateless demo"),
-    );
-  }
-}
-
-class DemoStateWidget extends StatefulWidget{
-  final String text;
-  DemoStateWidget(this.text);
-
-  @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return _DemoStateWidgetState(text);
-  }
-}
-
-class _DemoStateWidgetState extends State<DemoStateWidget>{
-  String text;
-  _DemoStateWidgetState(this.text);
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    new Future.delayed(const Duration(seconds: 1), (){
-      setState(() {
-        text="这就变了数值";
-      });
-    });
-  }
-
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    super.dispose();
-  }
-
-  @override
-  void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
-    super.didChangeDependencies();
-  }
+class DemoApp extends StatelessWidget {
+  DemoApp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Container(
-      child: Text(text ?? "this is a statefull demo"),
+    return new MaterialApp(
+      home: DemoPage(),
     );
   }
-}*/
-class MyApp extends StatelessWidget {
+}
+
+/*class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -169,4 +121,4 @@ class _MyHomePageState extends State<MyHomePage> {
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
-}
+}*/
